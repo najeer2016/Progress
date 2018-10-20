@@ -1,0 +1,37 @@
+<div class="container" style="margin: 50px 0px">
+  <div class="progress">
+    <!-- {{a}}% -->
+    <div class="progress-bar" role="progressbar" aria-valuenow="a" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': a+'%','background-color': 'red'}">
+      <label class="a" style="margin-top: 10px; text-align: right;">{{a}}%</label>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let item of b;let i = index">
+      <div class="our-team-main" (click)="display(i)">
+
+        <div class="team-front">
+          <img src="http://placehold.it/110x110/9c27b0/fff?text=Dilip" class="img-fluid" />
+          <h3>{{i+1}}</h3>
+          <p [ngClass]="(i+1 == 1 || i+1 == 25 || i+1 == 50 || i+1 == 75 || i+1 == 100 || (i+1)%2 == 0) ? ((i+1)%10 == 0 ? 'jii1' : 'jii')  : 'text text-primary'">
+            <label>Designer<span *ngIf="i+1 == 27" class="text text-success">Happy birth Day!!</span></label>
+          </p>
+        </div>
+
+        <div class="team-back">
+          <span>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis
+            natoque penatibus et magnis dis parturient montes,
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis
+            natoque.
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
